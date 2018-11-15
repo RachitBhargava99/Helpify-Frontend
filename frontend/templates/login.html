@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="static/log/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/log/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/log/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/log/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/log/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/log/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/log/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/log/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/log/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/log/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/log/css/main.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('static/log/images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method='POST' action="">
+                    {{ form.hidden_tag() }}
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
+                    {% with messages = get_flashed_messages(with_categories = true) %}
+            	        {% if messages %}
+	                        {% for category, message in messages %}
+                	            <div class = 'alert alert-{{ category }}'>
+	                                {{ message }}
+	                            </div>
+                            {% endfor %}
+	                    {% endif %}
+                    {% endwith %}
+                    <div class="wrap-input100 validate-input" data-validate = "Enter your GeorgiaTech email address">
+                        {{ form.email(class="input100", placeholder="Email address") }}
+                        <span class="focus-input100" data-placeholder="&#xf15a;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter your password">
+						{{ form.password(class="input100", placeholder="Password") }}
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="contact100-form-checkbox">
+						{{ form.remember(class="input-checkbox100", id="ckb1", type="checkbox") }}
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit" id="submit" name="submit">
+							Login
+						</button>
+					</div>
+                </form>
+
+                <div class="container-login100-form-btn p-t-10">
+                    <a href="/register">
+                        <button class="login100-form-btn">
+                            Sign Up
+                        </button>
+                    </a>
+                </div>
+
+                <div class="text-center p-t-40">
+                    <a class="txt1" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="static/log/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/log/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/log/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/log/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/log/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/log/vendor/daterangepicker/moment.min.js"></script>
+	<script src="static/log/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/log/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/log/js/main.js"></script>
+
+</body>
+</html>
